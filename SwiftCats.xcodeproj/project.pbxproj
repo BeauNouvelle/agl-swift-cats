@@ -68,14 +68,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8BC1A00B2631CAC900CCA223 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				8BC1A00C2631CADC00CCA223 /* Collection+Massage.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		B882EF912436AC2C00421A3C = {
 			isa = PBXGroup;
 			children = (
@@ -99,10 +91,10 @@
 		B882EF9C2436AC2C00421A3C /* SwiftCats */ = {
 			isa = PBXGroup;
 			children = (
-				8BC1A00B2631CAC900CCA223 /* Extensions */,
 				B882EF9D2436AC2D00421A3C /* AppDelegate.swift */,
 				B882EF9F2436AC2D00421A3C /* SceneDelegate.swift */,
 				B882EFA12436AC2D00421A3C /* ViewController.swift */,
+				8BC1A00C2631CADC00CCA223 /* Collection+Massage.swift */,
 				B882EFA32436AC2D00421A3C /* Main.storyboard */,
 				B882EFA62436AC2F00421A3C /* Assets.xcassets */,
 				B882EFA82436AC2F00421A3C /* LaunchScreen.storyboard */,

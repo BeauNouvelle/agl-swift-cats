@@ -11,7 +11,13 @@ import UIKit
 final class ViewController: UIViewController {
     
     let tableView = UITableView()
-    var genders = [Gender]()
+    var genders = [Gender]() {
+        didSet {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +30,7 @@ final class ViewController: UIViewController {
         view.addSubview(tableView)
         
         tableView.dataSource = self
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "CELL")
 
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
@@ -42,15 +49,21 @@ final class ViewController: UIViewController {
 extension ViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return genders.count
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return genders[section].catNames.count
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CELL", for: indexPath)
+        cell.textLabel?.text = genders[indexPath.section].catNames[indexPath.row]
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return genders[section].title
     }
     
 }

@@ -12,10 +12,12 @@ extension Collection where Element == Owner {
     
     func catsOnlyGroupedByGender() -> [Gender] {
         let ownersGroupedByGender = Dictionary(grouping: self, by: { $0.gender })
-        dump(ownersGroupedByGender)
+        let pettedGenders = ownersGroupedByGender.map {
+            Gender(title: $0.key,
+                   catNames: $0.value.flatMap { ($0.pets ?? []).filter { $0.type == "Cat" }.map { $0.name } }.sorted())
+        }
         
-        return []
+        return pettedGenders
     }
     
 }
-
