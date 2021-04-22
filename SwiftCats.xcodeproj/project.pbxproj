@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8BC1A00A2631CA5600CCA223 /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC1A0092631CA5600CCA223 /* Gender.swift */; };
+		8BC1A00D2631CADC00CCA223 /* Collection+Massage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC1A00C2631CADC00CCA223 /* Collection+Massage.swift */; };
 		B882EF9E2436AC2D00421A3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B882EF9D2436AC2D00421A3C /* AppDelegate.swift */; };
 		B882EFA02436AC2D00421A3C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B882EF9F2436AC2D00421A3C /* SceneDelegate.swift */; };
 		B882EFA22436AC2D00421A3C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B882EFA12436AC2D00421A3C /* ViewController.swift */; };
@@ -30,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8BC1A0092631CA5600CCA223 /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
+		8BC1A00C2631CADC00CCA223 /* Collection+Massage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Massage.swift"; sourceTree = "<group>"; };
 		B882EF9A2436AC2C00421A3C /* SwiftCats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftCats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B882EF9D2436AC2D00421A3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B882EF9F2436AC2D00421A3C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +68,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8BC1A00B2631CAC900CCA223 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8BC1A00C2631CADC00CCA223 /* Collection+Massage.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		B882EF912436AC2C00421A3C = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +99,7 @@
 		B882EF9C2436AC2C00421A3C /* SwiftCats */ = {
 			isa = PBXGroup;
 			children = (
+				8BC1A00B2631CAC900CCA223 /* Extensions */,
 				B882EF9D2436AC2D00421A3C /* AppDelegate.swift */,
 				B882EF9F2436AC2D00421A3C /* SceneDelegate.swift */,
 				B882EFA12436AC2D00421A3C /* ViewController.swift */,
@@ -114,6 +127,7 @@
 			children = (
 				B882EFC22436AE7800421A3C /* Owner.swift */,
 				B882EFC42436AF4800421A3C /* Pet.swift */,
+				8BC1A0092631CA5600CCA223 /* Gender.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -220,11 +234,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B882EFA22436AC2D00421A3C /* ViewController.swift in Sources */,
+				8BC1A00D2631CADC00CCA223 /* Collection+Massage.swift in Sources */,
 				B882EF9E2436AC2D00421A3C /* AppDelegate.swift in Sources */,
 				B882EFC02436AC4500421A3C /* NetworkService.swift in Sources */,
 				B882EFC32436AE7800421A3C /* Owner.swift in Sources */,
 				B882EFA02436AC2D00421A3C /* SceneDelegate.swift in Sources */,
 				B882EFC52436AF4800421A3C /* Pet.swift in Sources */,
+				8BC1A00A2631CA5600CCA223 /* Gender.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
